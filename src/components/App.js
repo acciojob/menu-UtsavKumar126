@@ -76,12 +76,14 @@ const App=()=>{
           desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
         },]
     const[menu,setMenu]=useState([]);
+    const[id,setId]=useState("");
 
     function changeMenu(e){
 
         let name=e.target.name;
         let menuItem=currMenu.filter((ele)=>ele.category===name);
         setMenu(menuItem);
+        setId(`menu-item-${name}`)
     }
     useEffect(()=>{
         setMenu(currMenu);
@@ -97,7 +99,7 @@ const App=()=>{
            
             <button name="shakes" onClick={changeMenu} id="filter-btn-3">Shakes</button>
             {
-            menu&&<div className="menu">
+            menu&&<div className="menu" data-test-id={id}>
                 {
                     menu.map((ele)=>
                         <div key={ele.id} className="menu-card">
