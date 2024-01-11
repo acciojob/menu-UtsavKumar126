@@ -91,11 +91,11 @@ const App=()=>{
     return(
         <div>
             <h1 className="heading">Our Menu</h1>
-            <button name="all" onClick={()=>setMenu(currMenu)}>All</button>
-            <button name="breakfast" onClick={changeMenu}>Breakfast</button>
-            <button name="lunch" onClick={changeMenu}>Lunch</button>
+            <button name="all" onClick={()=>setMenu(currMenu)} id="main">All</button>
+            <button name="breakfast" onClick={changeMenu} id="filter-btn-1">Breakfast</button>
+            <button name="lunch" onClick={changeMenu} id="filter-btn-2">Lunch</button>
            
-            <button name="shakes" onClick={changeMenu}>Shakes</button>
+            <button name="shakes" onClick={changeMenu} id="filter-btn-3">Shakes</button>
             {
             menu&&<div className="menu">
                 {
