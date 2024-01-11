@@ -10,3 +10,10 @@ button{
     justify-content: center;
     align-items: center;
 }
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.menu-card{
+    display: flex;
+}
